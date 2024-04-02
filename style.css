@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    letter-spacing: 0.4px;
+}
+
+body {
+    background-color: #f3f3f3;
+    height: 100%;
+    background-image: url('white_blue_rounds_bubbles_light_blue_background_4k_5k_hd_light_blue-2560x1440.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-color: #b6ecec;
+    width: 450px;
+    padding: 50px 40px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    box-shadow: 0 30px 50px #031922d6;
+    margin-top: 40px;
+    animation: slideAndMove 1s forwards, scaleEffect 0.3s ease; 
+}
+
+
+.container:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+@keyframes slideAndMove {
+    0% {
+        left: -500px; 
+    }
+    100% {
+        left: 50%; 
+    }
+}
+
+
+@keyframes scaleEffect {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
+
+
+
+/* Adjusting hover effect to include scaling */
+.container:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+
+/* Add a glow animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #22f2f2; 
+    }
+    100% {
+        box-shadow: 0 0 20px #2738cd; 
+    }
+}
+
+.reset {
+    background-color: #f1f7fa;
+    color: rgb(12, 18, 17);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    animation: glow 1.5s infinite alternate; 
+    transition: background-color 0.3s ease; 
+}
+
+.reset:hover {
+    background-color: #4ce5ea; 
+    animation: none; 
+}
+
+.title {
+    color: #044e61eb; 
+    text-decoration: none; 
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 20px; 
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+.lbl {
+    font-size: 16px;
+    color: #44475b;
+    font-weight: 400;
+}
+
+.val {
+    color: #44475b;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.input-box {
+    background-color: #19c7de;
+    color: #1a0303d8;
+    padding: 5px;
+    box-shadow: 0 30px 50px #21a9ded6;
+}
+
+#bill {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100px;
+    text-align: right;
+    color: #01000cba;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #13a883;
+}
+
+input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+input[type="range"]:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+section:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+section:not(:first-child) {
+    margin-top: 40px;
+}
+
+section:last-child {
+    background-color: #eaf3f4;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 30px 50px #21a9ded6;
+}
+
+section:last-child .val,
+section:last-child .lbl {
+    color: #4c4af4;
+}
